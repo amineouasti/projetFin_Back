@@ -4,7 +4,7 @@ class classification(db.Model):
     id = db.Column("id",db.Integer,primary_key=True)
     name = db.Column("name",db.String(30))
     id_user = db.Column(db.Integer, db.ForeignKey('users.id'))
-    def __init__(self,id,name,id_user):
-        self.id = id
+    def __init__(self,name,id_user):
+        
         self.name = name
         self.id_user = id_user
